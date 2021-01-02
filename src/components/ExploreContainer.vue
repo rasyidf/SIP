@@ -1,18 +1,27 @@
 <template>
-  <div id="container">
-    <strong>{{ name }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Masuk</ion-col>
+          <ion-col>00:00 WIB</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Keluar</ion-col>
+          <ion-col>00:00 WIB</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </template>
 
 <script lang="ts">
-
 export default {
-  name: 'ExploreContainer',
+  name: "ExploreContainer",
   props: {
-    name: String
-  }
-}
+    name: String,
+  },
+};
 </script>
 
 <style scoped>

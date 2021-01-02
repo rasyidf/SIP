@@ -39,12 +39,13 @@ export function usePhotoGallery() {
         let base64Data: string;
         // "hybrid" will detect Cordova or Capacitor;
         if (isPlatform('hybrid')) {
-          const file = await Filesystem.readFile({
+          const file = await Filesystem.readFile({ // eslint-disable-next-line 
             path: photo.path!
           });
           base64Data = file.data;
         } else {
             // Fetch the photo, read as a blob, then convert to base64 format
+            // eslint-disable-next-line 
             const response = await fetch(photo.webPath!);
             const blob = await response.blob();
             base64Data = await convertBlobToBase64(blob) as string;
