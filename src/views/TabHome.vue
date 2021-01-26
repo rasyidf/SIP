@@ -11,43 +11,38 @@
           <ion-title size="large">Beranda</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-card>
-        <ion-item>
-          <ion-label>
-            <template v-slot:start>
-              <ion-icon :icon="pin" size="extra-small"></ion-icon>
-            </template>
-            Riwayat
-          </ion-label> 
-          <template v-slot:end>
-            <ion-router-link href="/tabs/tab3">
-              <ion-button fill="outline">Lihat</ion-button>
-            </ion-router-link>
-          </template>
-        </ion-item> 
-        <ion-card-content>
-          Lihat Riwayat kehadiran dalam bulan ini.
-        </ion-card-content>
-      </ion-card>
+      <ion-router-link href="/tabs/hist">
+        <ion-card>
+          <ion-item>
+            <ion-label>
+              <ion-icon :icon="pinOutline" slot="start"></ion-icon>
+              Riwayat
+            </ion-label>
+          </ion-item>
+          <ion-card-content>
+            Lihat Riwayat kehadiran dalam bulan ini.
+          </ion-card-content>
+        </ion-card>
+      </ion-router-link>
 
-      <ion-card>
-        <ion-item>
-          <ion-label>Lakukan Presensi</ion-label>
-        </ion-item>
-
-        <ion-card-content>
-          Catat kehadiran kamu hari ini di tab Absensi
-        </ion-card-content>
-      </ion-card>
+      <ion-router-link href="/tabs/att">
+        <ion-card>
+          <ion-item>
+            <ion-label>Lakukan Presensi</ion-label>
+          </ion-item>
+          <ion-card-content>
+            Catat kehadiran kamu hari ini di tab Absensi.
+          </ion-card-content>
+        </ion-card>
+      </ion-router-link>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { pin } from "ionicons/icons";
+import { pinOutline } from "ionicons/icons";
 import {
   IonPage,
-  IonButton,
   IonHeader,
   IonToolbar,
   IonTitle,
@@ -59,14 +54,14 @@ import {
 } from "@ionic/vue";
 
 export default {
-  name: "Tab1",
+  name: "Home",
   components: {
     IonHeader,
     IonToolbar,
     IonTitle,
     IonContent,
     IonPage,
-    IonButton,
+
     IonCard,
     IonItem,
     IonLabel,
@@ -74,7 +69,7 @@ export default {
   },
   setup() {
     return {
-      pin,
+      pinOutline,
     };
   },
 };

@@ -25,7 +25,7 @@ import {
 } from "@ionic/vue"; 
 
 export default {
-  name: "Tab4",
+  name: "Report",
   components: {
     IonHeader,
     IonToolbar,

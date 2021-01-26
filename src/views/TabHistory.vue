@@ -27,7 +27,7 @@ import {
 import AttendanceHistoryItemCard from "@/components/AttendanceHistoryItemCard.vue";
 
 export default {
-  name: "Tab3",
+  name: "History",
   components: {
     IonHeader,
     IonToolbar,
