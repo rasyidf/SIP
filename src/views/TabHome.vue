@@ -14,18 +14,17 @@
       <ion-card>
         <ion-item>
           <ion-label>
-          <template v-slot:start>
-            <ion-icon :icon="pin" size="extra-small" ></ion-icon>
+            <template v-slot:start>
+              <ion-icon :icon="pin" size="extra-small"></ion-icon>
+            </template>
+            Riwayat
+          </ion-label> 
+          <template v-slot:end>
+            <ion-router-link href="/tabs/tab3">
+              <ion-button fill="outline">Lihat</ion-button>
+            </ion-router-link>
           </template>
-             Riwayat
-          
-          </ion-label>
-
-          <ion-router-link href="/tabs/tab3" slot="end">
-            <ion-button fill="outline">Lihat</ion-button>
-          </ion-router-link>
-        </ion-item>
-
+        </ion-item> 
         <ion-card-content>
           Lihat Riwayat kehadiran dalam bulan ini.
         </ion-card-content>
